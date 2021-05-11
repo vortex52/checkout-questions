@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>sd_checkout_questions</id>
+    <status>active</status>
+    <version>1.0</version>
+    <priority>900</priority>
+    <position>900</position>
+    <default_language>en</default_language>
+    <auto_install>MULTIVENDOR,ULTIMATE</auto_install>   
+</addon>
