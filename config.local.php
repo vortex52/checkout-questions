@@ -168,6 +168,14 @@ if (file_exists(DIR_ROOT . '/local_conf.php')) {
     include_once(DIR_ROOT . '/local_conf.php');
 }
 
+/*** Delete on production ***/
+
+define('DEVELOPMENT', true);
+$config['tweaks']['disable_block_cache'] = true;
+
+/*** Delete on production ***/
+
+
 // Enable DEV mode if Product status is not empty (like Beta1, dev, etc.)
 if (PRODUCT_STATUS != '' && !defined('DEVELOPMENT')) {
     ini_set('display_errors', 'on');
