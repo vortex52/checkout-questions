@@ -12,7 +12,7 @@ msgstr ""
 
 msgctxt "Addons::name::sd_checkout_questions"
 msgid "[SD] Checkout questions"
-msgstr "[SD] Вопросы по оформлению заказа"
+msgstr "[SD] Вопросы при оформлении заказа"
 
 msgctxt "Addons::description::sd_checkout_questions"
 msgid "Ask a question on the checkout page"
@@ -20,7 +20,7 @@ msgstr "Задать вопрос на странице оформления з�
 
 msgctxt "Languages::checkout_questions"
 msgid "Сheckout questions"
-msgstr "Вопросы Checkout"
+msgstr "Вопросы при оформлении заказа"
 
 msgctxt "Languages::add_checkout_questions"
 msgid "Add Сheckout questions"
@@ -33,3 +33,7 @@ msgstr "Редактировать вопрос"
 msgctxt "Languages::select_checkout_questions"
 msgid "Select checkout questions"
 msgstr "Вводите значения для спиcка опций через запятую без пробелов"
+
+msgctxt "Languages::checkout_questions_header_form"
+msgid "Сheckout questions header form"
+msgstr "Здесь вы можете ответить на вопросы:"

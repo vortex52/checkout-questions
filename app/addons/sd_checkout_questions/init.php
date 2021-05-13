@@ -1,6 +1,7 @@
 <?php
 
-if (!defined('BOOTSTRAP')) { die('Access denied'); }
+if (!defined('BOOTSTRAP')) {die('Access denied');}
 
-fn_register_hooks(    
+fn_register_hooks(
+    'checkout_place_orders_pre_route'
 );

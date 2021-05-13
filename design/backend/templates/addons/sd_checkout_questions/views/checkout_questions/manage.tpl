@@ -2,7 +2,6 @@
 
 {script src="js/addons/sd_checkout_questions/checkout_questions.js"}
 
-{if $checkout_questions}
 <form class="form-horizontal form-edit" action="{""|fn_url}" method="POST" name="checkout_questions_form">
 
     <div class="table-responsive-wrapper longtap-selection">
@@ -18,6 +17,7 @@
             <th width="10%" class="right">{__("status")}</th>
         </tr>
         </thead>
+        {if $checkout_questions}
         {foreach from=$checkout_questions item="var" key="key"}
         <tr class="cm-longtap-target">
             <td width="10%">                
@@ -41,20 +41,20 @@
         </tr>
 
         {/foreach}
+        {/if}
         </table>
     </div>
 </form>
-{/if}
 
 {include file="addons/sd_checkout_questions/views/components/new_popup.tpl"}
 
 {/capture}
 
-{if $checkout_questions}
 {capture name="adv_buttons"}
     {include file="common/popupbox.tpl" id="add_seo_rule" text=__("add_checkout_questions") title=__("add_checkout_questions") content=$smarty.capture.add_new_quest act="general" icon="icon-plus"}
 {/capture}
 
+{if $checkout_questions}
 {capture name="buttons"}
     {include file="buttons/save.tpl" but_name="dispatch[checkout_questions.m_update]" but_role="action" but_target_form="checkout_questions_form" but_meta="cm-submit btn-primary"}   
 {/capture}
