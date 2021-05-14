@@ -37,3 +37,11 @@ msgstr "Вводите значения для спиcка опций через
 msgctxt "Languages::checkout_questions_header_form"
 msgid "Сheckout questions header form"
 msgstr "Здесь вы можете ответить на вопросы:"
+
+msgctxt "SettingsSections::sd_checkout_questions::general"
+msgid "General"
+msgstr "Общие"
+
+msgctxt "SettingsOptions::sd_checkout_questions::checkout_questions_view"
+msgid "Enable form to checkout"
+msgstr "Включить форму на витрине"

@@ -8,6 +8,18 @@
     <supplier>SD</supplier>
     <default_language>en</default_language>
     <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
+    <settings edition_type="ROOT">
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="checkout_questions_view">
+                        <type>checkbox</type>
+                        <default_value>Y</default_value>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
     <queries>
         <item>DROP TABLE IF EXISTS ?:checkout_questions;</item>
         <item>

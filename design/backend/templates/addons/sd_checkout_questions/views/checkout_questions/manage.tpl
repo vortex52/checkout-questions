@@ -8,8 +8,7 @@
         <table width="100%" class="table table-middle table--relative table-responsive">
         <thead 
             data-ca-bulkedit-default-object="true"
-            data-ca-bulkedit-component="defaultObject"
-        >
+            data-ca-bulkedit-component="defaultObject">
         <tr>        
             <th width="10%">{__("position")}</th>
             <th width="50%">{__("name")}</th>

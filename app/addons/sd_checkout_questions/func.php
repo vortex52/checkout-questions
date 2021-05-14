@@ -151,6 +151,13 @@ function fn_sd_checkout_questions_check_user_data($data)
 /**** HOOKS ****/
 /****/
 
+/**
+ * Perform actions before order placement redirect on checkout
+ *
+ * @param array $cart   Cart data
+ * @param array $auth   Authentication data
+ * @param array $params Request parameters
+ */
 function fn_sd_checkout_questions_checkout_place_orders_pre_route($cart, $auth, $params)
 {
     if ($params['rq_data'] && $cart['processed_order_id']) {
