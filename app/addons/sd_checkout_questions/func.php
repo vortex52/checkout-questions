@@ -140,7 +140,7 @@ function fn_sd_checkout_questions_check_user_data($data)
     $res = [];
     foreach ($data as $key => $value) {
         if ($value) {
-            $res[$key] = strip_tags(trim($value));
+            $res[$key] = trim(strip_tags($value));
         }
     }
 
