@@ -152,18 +152,38 @@ function fn_sd_checkout_questions_check_user_data($data)
 /****/
 
 /**
- * Perform actions before order placement redirect on checkout
+ * Executes before checking a product stock balance when placing an order on checkout,
+ * allows to modify product data.
  *
- * @param array $cart   Cart data
- * @param array $auth   Authentication data
- * @param array $params Request parameters
+ * @param array  $cart    Cart contents
+ * @param array  $auth    Authentication data
+ * @param array  $params  Request parameters
+ * @param string $cart_id Product cart ID
+ * @param string $product Product data
+ * @param string $_is_edp Whether product is downloadable
  */
-function fn_sd_checkout_questions_checkout_place_orders_pre_route($cart, $auth, $params)
+function fn_sd_checkout_questions_checkout_place_order_before_check_amount_in_stock(&$cart, $auth, $params, $cart_id, $product, $_is_edp)
 {
-    if ($params['rq_data'] && $cart['processed_order_id']) {
-        $params['rq_data'] = fn_sd_checkout_questions_check_user_data($params['rq_data']);
-        $data = serialize($params['rq_data']);
-        $order_id = current($cart['processed_order_id']);
+    $cart['rq_data'] = $params['rq_data'];
+}
+
+/**
+ * Places an order
+ *
+ * @param array  $cart              Array of the cart contents and user information necessary for purchase
+ * @param array  $auth              Array of user authentication data (e.g. uid, usergroup_ids, etc.)
+ * @param string $action            Current action. Can be empty or "save"
+ * @param int    $issuer_id
+ * @param int    $parent_order_id
+ *
+ * @return array
+ */
+function fn_sd_checkout_questions_place_order($order_id, $action, $order_status, $cart, $auth)
+{
+    if ($cart['rq_data'] && $order_id) {
+        $cart['rq_data'] = fn_sd_checkout_questions_check_user_data($cart['rq_data']);
+        $data            = serialize($cart['rq_data']);
         db_query('UPDATE ?:orders SET checkout_questions = ?s WHERE order_id = ?i', $data, $order_id);
     }
+
 }
