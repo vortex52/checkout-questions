@@ -1,8 +1,8 @@
 <?php
 
-$schema['checkout_questions'] = array(
+$schema['checkout_questions'] = [
     'class' => '\Tygh\Addons\SdCheckoutQuestions\Documents\Order\CheckoutQuestionsVariable',
-    'arguments' => array('#context', '@formatter'),
-);
+    'arguments' => ['#context'],
+];
 
 return $schema;
