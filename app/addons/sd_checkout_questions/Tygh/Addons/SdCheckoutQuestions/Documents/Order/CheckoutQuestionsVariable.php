@@ -12,8 +12,7 @@ use Tygh\Tygh;
  */
 class CheckoutQuestionsVariable implements IVariable
 {
-    public $questions;
-    protected $ItemContext;
+    public $questions;  
 
     /**
      * CheckoutQuestionsVariable constructor.
